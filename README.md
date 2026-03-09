@@ -8,7 +8,7 @@ The program is written in C++, and it uses GLFW, ImGUI and ImPlot to render the 
 
 ## How To Use:
 
-CMakeLists are included. Make sure that you have ***cmake*** and ***make*** installed.
+CMakeLists are included. Make sure that you have ***cmake*** and ***make*** installed. (You can do this easily through Homebrew!)
 
 Also make sure that you have ***GLFW binaries installed on your computer***.
 
