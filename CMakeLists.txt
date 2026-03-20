@@ -3,12 +3,10 @@ project(AircraftSimulator)
 
 set(CMAKE_CXX_STANDARD 17)
 
-# Silence macOS OpenGL warnings
+# silence macOS OpenGL warnings, comment out if you're on windows/linux/etc
 add_definitions(-DGL_SILENCE_DEPRECATION)
 
-# -------------------------
-# Include directories
-# -------------------------
+# include directories
 
 include_directories(
     include
@@ -17,15 +15,11 @@ include_directories(
     external/implot
 )
 
-# -------------------------
 # GLFW
-# -------------------------
 
 add_subdirectory(external/glfw)
 
-# -------------------------
-# Source files
-# -------------------------
+# source files
 
 set(SRC
 
@@ -48,15 +42,11 @@ set(SRC
     external/implot/implot_items.cpp
 )
 
-# -------------------------
-# Create executable
-# -------------------------
+# create executable
 
 add_executable(simulator ${SRC})
 
-# -------------------------
-# Link libraries
-# -------------------------
+# link libraries
 
 target_link_libraries(simulator
     glfw

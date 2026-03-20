@@ -59,7 +59,7 @@ int main() {
 
     io.IniFilename = nullptr;
 
-    // Aircraft stuff
+    // aircraft stuff
 
     float aircraft_mass = 0;
     float wingspan = 0;
@@ -120,7 +120,7 @@ int main() {
                 Aircraft aircraft = Aircraft(aircraft_mass, available_thrust, wing, CD0, oswald_efficiency);
 
                 for (int i = 0; i < GRAPH_POINTS; i++) {
-                    float v = 1.0f + i * 2.0f; // velocities from 1 to ~200 m/s
+                    float v = 1.0f + i * 2.0f; // velocities from 1 to 200 m/s
 
                     Flight_Condition fc(v);
 
@@ -202,40 +202,3 @@ int main() {
 
     return 0;
 }
-
-
-// Drone:
-// Mass (kg): 5
-// Wingspan (m): 2
-// Wing Area (m²): 0.6
-// Thrust (N): 80
-// CD0: 0.03
-// Oswald Efficiency: 0.8
-// Velocity (m/s): 18
-
-// Cessna:
-// Mass (kg): 1100
-// Wingspan (m): 11
-// Wing Area (m²): 16.2
-// Thrust (N): 2700
-// CD0: 0.025
-// Oswald Efficiency: 0.8
-// Velocity (m/s): 60
-
-// Jet:
-// Mass (kg): 70000
-// Wingspan (m): 35.8
-// Wing Area (m²): 124.6
-// Thrust (N): 240000
-// CD0: 0.02
-// Oswald Efficiency: 0.85
-// Velocity (m/s): 230
-
-// Failure:
-// Mass: 500
-// Wingspan: 10
-// Wing Area: 20
-// Thrust: 100
-// CD0: 0.04
-// Oswald Efficiency: 0.7
-// Velocity: 10
